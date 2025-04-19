@@ -7,3 +7,8 @@ variable "account_number" {
   description = "The AWS account number"
   type        = string
 }
+
+variable "lambda_arn" {
+  description = "The ARN for the Spotify listening history Lambda function"
+  type        = string
+}
