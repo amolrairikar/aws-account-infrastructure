@@ -3,7 +3,6 @@ resource "aws_scheduler_schedule" "this" {
   description                  = "Trigger Lambda function every 1 hour"
   schedule_expression          = "rate(1 hour)"
   schedule_expression_timezone = "America/Chicago"
-  state                        = "DISABLED"
   flexible_time_window {
     mode = "OFF"
   }
