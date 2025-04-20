@@ -2,8 +2,8 @@ resource "aws_s3_bucket" "this" {
   bucket = "${var.bucket_prefix}-${var.account_number}-${var.environment}"
 
   tags = {
-    Project     = var.project
-    Environment = var.environment
+    project     = var.project
+    environment = var.environment
   }
 }
 
