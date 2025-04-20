@@ -13,7 +13,7 @@ variable "role_name" {
   type        = string
 }
 
-variable "service_name" {
-  description = "The name of the AWS service (will be used in the trust policy)"
+variable "trust_relationship_policy" {
+  description = "The trust relationship policy JSON for the role"
   type        = string
 }
