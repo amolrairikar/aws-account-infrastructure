@@ -38,8 +38,8 @@ variable "lambda_runtime" {
   type        = string
 }
 
-variable "lambda_execution_role_policy" {
-  description = "The execution role policy JSON for the Lambda"
+variable "lambda_execution_role_arn" {
+  description = "The ARN of the Lambda execution role"
   type        = string
 }
 
