@@ -17,3 +17,13 @@ variable "trust_relationship_policy" {
   description = "The trust relationship policy JSON for the role"
   type        = string
 }
+
+variable "inline_policy" {
+  description = "The inline policy JSON for the role"
+  type        = string
+}
+
+variable "inline_policy_description" {
+  description = "The inline policy description"
+  type        = string
+}

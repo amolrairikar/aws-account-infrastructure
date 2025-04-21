@@ -7,3 +7,14 @@ resource "aws_iam_role" "this" {
     project     = var.project
   }
 }
+
+resource "aws_iam_policy" "this" {
+  name        = "${aws_iam_role.this.role_name}-inline-policy"
+  description = var.inline_policy_description
+  policy      = var.inline_policy
+}
+
+resource "aws_iam_role_policy_attachment" "this" {
+  role       = aws_iam_role.this.name
+  policy_arn = aws_iam_policy.this.arn
+}
