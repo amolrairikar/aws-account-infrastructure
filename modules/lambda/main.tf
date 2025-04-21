@@ -1,8 +1,3 @@
-resource "aws_iam_role" "this" {
-  name               = "${var.lambda_name}-execution-role"
-  assume_role_policy = var.lambda_execution_role_policy
-}
-
 resource "aws_lambda_function" "this" {
   function_name    = var.lambda_name
   description      = var.lambda_description
@@ -11,7 +6,7 @@ resource "aws_lambda_function" "this" {
   handler          = var.lambda_handler
   memory_size      = var.lambda_memory_size
   runtime          = var.lambda_runtime
-  role             = aws_iam_role.this.arn
+  role             = var.lambda_execution_role_arn
   architectures    = ["x86_64"]
   tags = {
     environment = var.environment
