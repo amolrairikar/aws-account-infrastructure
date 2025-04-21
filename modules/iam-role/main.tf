@@ -9,7 +9,7 @@ resource "aws_iam_role" "this" {
 }
 
 resource "aws_iam_policy" "this" {
-  name        = "${aws_iam_role.this.role_name}-inline-policy"
+  name        = "${aws_iam_role.this.name}-inline-policy"
   description = var.inline_policy_description
   policy      = var.inline_policy
 }
