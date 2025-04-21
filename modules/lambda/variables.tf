@@ -38,11 +38,6 @@ variable "lambda_runtime" {
   type        = string
 }
 
-variable "lambda_timeout" {
-  description = "The amount of seconds before the Lambda function times out"
-  type        = string
-}
-
 variable "lambda_execution_role_policy" {
   description = "The execution role policy JSON for the Lambda"
   type        = string
