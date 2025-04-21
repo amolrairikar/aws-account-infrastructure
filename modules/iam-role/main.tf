@@ -12,6 +12,11 @@ resource "aws_iam_policy" "this" {
   name        = "${aws_iam_role.this.name}-inline-policy"
   description = var.inline_policy_description
   policy      = var.inline_policy
+
+  tags = {
+    environment = var.environment
+    project     = var.project
+  }
 }
 
 resource "aws_iam_role_policy_attachment" "this" {
