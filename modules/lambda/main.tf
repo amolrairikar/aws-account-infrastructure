@@ -8,6 +8,9 @@ resource "aws_lambda_function" "this" {
   runtime          = var.lambda_runtime
   role             = var.lambda_execution_role_arn
   architectures    = ["x86_64"]
+  environment {
+    variables = var.lambda_environment_variables
+  }
   tags = {
     environment = var.environment
     project     = var.project
