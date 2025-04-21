@@ -43,6 +43,12 @@ variable "lambda_execution_role_arn" {
   type        = string
 }
 
+variable "lambda_environment_variables" {
+  type        = map(string)
+  description = "Environment variables for the Lambda function"
+  default     = {}
+}
+
 variable "sns_topic_arn" {
   description = "The ARN of the SNS topic Lambda failures will be sent to"
   type        = string
