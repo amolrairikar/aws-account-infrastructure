@@ -6,6 +6,7 @@ resource "aws_lambda_function" "this" {
   handler          = var.lambda_handler
   memory_size      = var.lambda_memory_size
   runtime          = var.lambda_runtime
+  timeout          = var.lambda_timeout
   role             = var.lambda_execution_role_arn
   architectures    = ["x86_64"]
   environment {

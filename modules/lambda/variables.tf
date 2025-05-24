@@ -38,6 +38,11 @@ variable "lambda_runtime" {
   type        = string
 }
 
+variable "lambda_timeout" {
+  description = "The max duration the Lambda function will run before timing out"
+  type        = number
+}
+
 variable "lambda_execution_role_arn" {
   description = "The ARN of the Lambda execution role"
   type        = string
