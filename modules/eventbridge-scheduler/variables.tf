@@ -1,10 +1,5 @@
-variable "environment" {
-  description = "The name of the deployment environment"
-  type        = string
-}
-
-variable "project" {
-  description = "The name of the sub-project within the AWS account"
+variable "scheduler_name" {
+  description = "The name of the EventBridge scheduler definition"
   type        = string
 }
 

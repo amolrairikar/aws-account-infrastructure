@@ -1,6 +1,6 @@
 resource "aws_scheduler_schedule" "this" {
-  name                         = "${var.project}-${var.environment}-lambda-trigger"
-  description                  = "Triggers lambda function ${var.lambda_arn} at a rate of ${var.schedule_frequency}"
+  name                         = var.scheduler_name
+  description                  = "Triggers lambda function ${var.lambda_arn} using schedule ${var.schedule_frequency}"
   schedule_expression          = var.schedule_frequency
   schedule_expression_timezone = var.schedule_timezone
   state                        = var.schedule_state
