@@ -17,3 +17,8 @@ variable "project" {
   description = "The name of the sub-project within the AWS account"
   type        = string
 }
+
+variable "versioning_status" {
+  description = "The versioning status for the bucket (Enabled, Suspended, or Disabled)"
+  type        = string
+}
