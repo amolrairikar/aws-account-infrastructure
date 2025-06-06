@@ -22,3 +22,9 @@ variable "versioning_status" {
   description = "The versioning status for the bucket (Enabled, Suspended, or Disabled)"
   type        = string
 }
+
+variable "bucket_acl" {
+  description = "The ACL setting for the S3 bucket. Can be 'private', 'public-read', 'public-read-write', 'aws-exec-read', 'authenticated-read', 'bucket-owner-read','bucket-owner-full-control', or 'log-delivery-write'."
+  default     = "private"
+  type        = string
+}
