@@ -28,3 +28,9 @@ variable "bucket_acl" {
   default     = "private"
   type        = string
 }
+
+variable "object_ownership" {
+  description = "The object ownership setting for the S3 bucket. Can be 'BucketOwnerPreferred', 'ObjectWriter', or 'BucketOwnerEnforced'."
+  default     = "BucketOwnerPreferred"
+  type        = string
+}
