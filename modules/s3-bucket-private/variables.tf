@@ -1,5 +1,5 @@
-variable "bucket_prefix" {
-  description = "The prefix for the name of the S3 bucket"
+variable "bucket_name" {
+  description = "The name of the S3 bucket"
   type        = string
 }
 
