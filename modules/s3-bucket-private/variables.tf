@@ -31,6 +31,7 @@ variable "bucket_acl" {
 
 variable "enable_acl" {
   description = "Boolean true/false to enable or disable ACLs on the bucket. If true, ACLs will be enabled with the value specified in bucket_acl, else the value will be null."
+  type        = bool
 }
 
 variable "object_ownership" {
