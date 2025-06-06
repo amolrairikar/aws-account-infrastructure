@@ -29,6 +29,10 @@ variable "bucket_acl" {
   type        = string
 }
 
+variable "enable_acl" {
+  description = "Boolean true/false to enable or disable ACLs on the bucket. If true, ACLs will be enabled with the value specified in bucket_acl, else the value will be null."
+}
+
 variable "object_ownership" {
   description = "The object ownership setting for the S3 bucket. Can be 'BucketOwnerPreferred', 'ObjectWriter', or 'BucketOwnerEnforced'."
   default     = "BucketOwnerPreferred"
