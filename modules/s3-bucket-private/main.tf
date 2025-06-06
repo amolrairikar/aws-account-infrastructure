@@ -24,8 +24,9 @@ resource "aws_s3_bucket_public_access_block" "this" {
 }
 
 resource "aws_s3_bucket_acl" "this" {
+  count  = var.enable_acl ? 1 : 0
   bucket = aws_s3_bucket.this.id
-  acl    = var.enable_acl ? var.bucket_acl: null
+  acl    = var.bucket_acl
   depends_on = [aws_s3_bucket_ownership_controls.this]
 }
 
