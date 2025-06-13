@@ -9,6 +9,7 @@ resource "aws_lambda_function" "this" {
   timeout          = var.lambda_timeout
   role             = var.lambda_execution_role_arn
   architectures    = ["x86_64"]
+  layers           = var.lambda_layers
   environment {
     variables = var.lambda_environment_variables
   }

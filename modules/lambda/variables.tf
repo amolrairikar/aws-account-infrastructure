@@ -54,6 +54,12 @@ variable "lambda_environment_variables" {
   default     = {}
 }
 
+variable "lambda_layers" {
+  description = "Optional list of Lambda layer ARNs"
+  type        = list(string)
+  default     = []
+}
+
 variable "sns_topic_arn" {
   description = "The ARN of the SNS topic Lambda failures will be sent to"
   type        = string
