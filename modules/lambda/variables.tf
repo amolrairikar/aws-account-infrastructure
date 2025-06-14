@@ -18,11 +18,6 @@ variable "lambda_description" {
   type        = string
 }
 
-variable "lambda_filename" {
-  description = "The name of the .zip file containing the Lambda function and dependencies"
-  type        = string
-}
-
 variable "lambda_handler" {
   description = "The handler function in the source code of the Lambda function"
   type        = string
@@ -45,6 +40,21 @@ variable "lambda_timeout" {
 
 variable "lambda_execution_role_arn" {
   description = "The ARN of the Lambda execution role"
+  type        = string
+}
+
+variable "s3_bucket_name" {
+  description = "The name of the S3 bucket containing the source code for the Lambda function"
+  type        = string
+}
+
+variable "s3_object_key" {
+  description = "The S3 object key for the Lambda function source code"
+  type        = string
+}
+
+variable "s3_object_version" {
+  description = "The version of the S3 object for the Lambda function source code"
   type        = string
 }
 
