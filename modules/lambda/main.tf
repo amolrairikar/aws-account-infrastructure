@@ -18,6 +18,7 @@ resource "aws_lambda_function" "this" {
   environment {
     variables = var.lambda_environment_variables
   }
+  depends_on = [aws_cloudwatch_log_group.this]
 }
 
 resource "aws_lambda_function_event_invoke_config" "this" {
