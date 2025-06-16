@@ -28,3 +28,8 @@ resource "aws_lambda_function_event_invoke_config" "this" {
     }
   }
 }
+
+resource "aws_cloudwatch_log_group" "this" {
+  name              = "/aws/lambda/${var.lambda_name}"
+  retention_in_days = var.log_retention_days
+}

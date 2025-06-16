@@ -74,3 +74,8 @@ variable "sns_topic_arn" {
   description = "The ARN of the SNS topic Lambda failures will be sent to"
   type        = string
 }
+
+variable "log_retention_days" {
+  description = "The number of days to retain Lambda execution logs in Cloudwatch"
+  type        = number
+}
