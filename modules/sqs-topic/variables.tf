@@ -13,6 +13,11 @@ variable "queue_name" {
   type        = string
 }
 
+variable "message_retention_seconds" {
+  description = "The amount of time in seconds to retain messages in the queue"
+  type        = number
+}
+
 variable "visibility_timeout_seconds" {
   description = "The amount of time in seconds an SQS message will be invisible to other consumers after being received by a consumer"
   type        = number
