@@ -28,16 +28,6 @@ variable "time_zone" {
   type        = string
 }
 
-variable "glue_database_name" {
-  description = "The name of the Glue database containing the source data table"
-  type        = string
-}
-
-variable "glue_table_name" {
-  description = "The name of the Glue table containing the source data schema"
-  type        = string
-}
-
 variable "buffering_size" {
   description = "Buffer incoming data to the specified size, in MBs, before delivering it to S3"
   type        = number
