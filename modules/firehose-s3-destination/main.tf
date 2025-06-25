@@ -43,4 +43,9 @@ resource "aws_kinesis_firehose_delivery_stream" "this" {
       log_stream_name = "S3DeliveryLogs"
     }
   }
+
+  tags = {
+    environment = var.environment
+    project     = var.project
+  }
 }
