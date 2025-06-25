@@ -1,0 +1,49 @@
+variable "environment" {
+  description = "The name of the deployment environment"
+  type        = string
+}
+
+variable "project" {
+  description = "The name of the sub-project within the AWS account"
+  type        = string
+}
+
+variable "firehose_stream_name" {
+  description = "The name of the Firehose delivery stream"
+  type        = string
+}
+
+variable "firehose_role_arn" {
+  description = "The ARN of the IAM role associated with Firehose"
+  type        = string
+}
+
+variable "s3_bucket_arn" {
+  description = "The ARN of the S3 bucket Firehose will write data to"
+  type        = string
+}
+
+variable "time_zone" {
+  description = "The time zone to use. Valid values are UTC or a non-3-letter IANA time zones (e.g., America/Los_Angeles)."
+  type        = string
+}
+
+variable "glue_database_name" {
+  description = "The name of the Glue database containing the source data table"
+  type        = string
+}
+
+variable "glue_table_name" {
+  description = "The name of the Glue table containing the source data schema"
+  type        = string
+}
+
+variable "buffering_interval" {
+  description = "The number of seconds to buffer incoming data for before delivering it to S3"
+  type        = number
+}
+
+variable "log_group_name" {
+  description = "The name of the Cloudwatch log group to send Firehose logs to"
+  type        = string
+}
