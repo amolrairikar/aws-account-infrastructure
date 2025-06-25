@@ -38,6 +38,11 @@ variable "glue_table_name" {
   type        = string
 }
 
+variable "buffering_size" {
+  description = "Buffer incoming data to the specified size, in MBs, before delivering it to S3"
+  type        = number
+}
+
 variable "buffering_interval" {
   description = "The number of seconds to buffer incoming data for before delivering it to S3"
   type        = number

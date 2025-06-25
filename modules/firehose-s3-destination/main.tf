@@ -6,6 +6,7 @@ resource "aws_kinesis_firehose_delivery_stream" "this" {
     role_arn           = var.firehose_role_arn
     bucket_arn         = var.s3_bucket_arn
     custom_time_zone   = var.time_zone
+    buffering_size     = var.buffering_size
     buffering_interval = var.buffering_interval
 
     data_format_conversion_configuration {
