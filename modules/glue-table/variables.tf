@@ -29,9 +29,10 @@ variable "columns" {
 
 variable "partition_keys" {
   description = "List of partition key definitions"
-  type = optional(list(object({
+  type = list(object({
     name    = string
     type    = string
     comment = optional(string)
-  })), [])
+  }))
+  default = []
 }
