@@ -34,7 +34,7 @@ resource "aws_kinesis_firehose_delivery_stream" "this" {
     }
 
     dynamic_partitioning_configuration {
-      enabled = true
+      enabled = false
     }
 
     cloudwatch_logging_options {
