@@ -40,5 +40,5 @@ variable "buffering_interval" {
 
 variable "log_retention_days" {
   description = "The number of days to retain Cloudwatch logs for the delivery stream"
-  type        = string
+  type        = number
 }
