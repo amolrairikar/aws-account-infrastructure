@@ -38,7 +38,7 @@ variable "buffering_interval" {
   type        = number
 }
 
-variable "log_group_name" {
-  description = "The name of the Cloudwatch log group to send Firehose logs to"
+variable "log_retention_days" {
+  description = "The number of days to retain Cloudwatch logs for the delivery stream"
   type        = string
 }

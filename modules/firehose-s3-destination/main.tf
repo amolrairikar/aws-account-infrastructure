@@ -12,11 +12,20 @@ resource "aws_kinesis_firehose_delivery_stream" "this" {
 
     cloudwatch_logging_options {
       enabled = true
-      log_group_name = "/aws/kinesisfirehose/${var.log_group_name}"
+      log_group_name = aws_cloudwatch_log_group.this.name
       log_stream_name = "S3DeliveryLogs"
     }
   }
 
+  tags = {
+    environment = var.environment
+    project     = var.project
+  }
+}
+
+resource "aws_cloudwatch_log_group" "this" {
+  name              = "/aws/firehose/${var.firehose_stream_name}"
+  retention_in_days = var.log_retention_days
   tags = {
     environment = var.environment
     project     = var.project
